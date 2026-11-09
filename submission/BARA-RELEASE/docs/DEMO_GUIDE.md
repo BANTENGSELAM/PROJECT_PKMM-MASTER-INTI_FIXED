@@ -1,7 +1,7 @@
 # Panduan Skenario Demonstrasi (Demo Guide)
-## BARA / KARSA-FIRE — Indonesia Fire Watch
+## BARA — Sistem Pemantauan Indikasi Kebakaran Hutan dan Lahan
 
-Dokumen ini disusun sebagai panduan langkah-demi-langkah bagi pemateri dalam melaksanakan presentasi atau pengujian langsung (*live demonstration*) prototipe BARA di hadapan audiens atau penguji.
+Dokumen ini disusun sebagai panduan langkah-demi-langkah bagi pemateri dalam melaksanakan presentasi atau pengujian langsung (*live demonstration*) aplikasi BARA (inisiatif historis BARA / KARSA-FIRE) di hadapan audiens atau penguji.
 
 ---
 
@@ -70,14 +70,14 @@ Pastikan langkah-langkah berikut telah selesai 10 menit sebelum demonstrasi dimu
    - Tunjukkan **Kolom 02 (Potensi Kerawanan Terbakar):** Titik grid hasil analisis model Sentinel-2 berstatus Kelas 1 (≤14 hari) untuk pencegahan dini.
    - Klik tombol **"↗ Peta"** pada salah satu baris prioritas: perlihatkan peta otomatis bergeser dan memperbesar lokasi titik tersebut.
 
-### Langkah 6: Pusat Notifikasi & Alur Verifikasi DARURAT
-1. **Narasi:** Jelaskan tata kelola notifikasi dan integritas bahwa status darurat tidak dibuat sembarangan oleh bot.
+### Langkah 6: Pusat Notifikasi & Tata Kelola Penanganan Event
+1. **Narasi:** Jelaskan tata kelola notifikasi dan integritas bahwa status notifikasi dan insiden dikelola secara terstruktur dan transparan oleh petugas.
 2. **Aksi:**
    - Klik tombol lonceng di header kanan atas untuk membuka panel **Pusat Notifikasi**.
    - Tunjukkan daftar notifikasi dengan badge tingkat keparahan (`INFO`, `WASPADA`, `DARURAT`).
+   - Tunjukkan tombol aksi yang kontekstual dan rapi (`↗ Lihat lokasi`, `Detail`, `Akui`, `Selesaikan event`).
    - Klik tombol **"Detail"** pada salah satu notifikasi untuk melihat riwayat bukti dan log pengiriman.
-   - Klik tombol **"Verifikasi DARURAT"**: masukkan nama petugas verifikator (misal: "Budi - Tim Reaksi Cepat").
-   - Tunjukkan status event naik menjadi `VERIFIED` dan penanda insiden terverifikasi bertambah di peta.
+   - Klik tombol **"Akui"** untuk mengonfirmasi penanganan.
    - Klik tombol **"Selesaikan event"** untuk menutup siklus insiden setelah penanganan tuntas.
 
 ### Langkah 7: Mengunduh Data Deteksi (Ekspor CSV)

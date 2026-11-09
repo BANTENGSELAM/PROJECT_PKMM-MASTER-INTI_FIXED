@@ -1,10 +1,10 @@
 # Panduan Pengguna BARA (BARA User Guide)
-## Sistem Pemantauan Anomali Panas & Deteksi Dini Kebakaran Lahan
+## Sistem Pemantauan Indikasi Kebakaran Hutan dan Lahan
 
 ---
 
 ## 1. Pengenalan BARA
-**BARA (Indonesia Fire Watch / KARSA-FIRE)** adalah sistem dashboard interaktif berbasis web yang memadukan data pengamatan satelit cuaca/termal (NASA FIRMS & NASA GIBS) dengan citra multispektral resolusi tinggi (Copernicus Sentinel-2) serta model kecerdasan buatan (*Machine Learning* XGBoost).
+**BARA** adalah Sistem Pemantauan Indikasi Kebakaran Hutan dan Lahan berupa dashboard interaktif berbasis web yang memadukan data pengamatan satelit cuaca/termal (NASA FIRMS & NASA GIBS) dengan citra multispektral resolusi tinggi (Copernicus Sentinel-2) serta model kecerdasan buatan (*Machine Learning* XGBoost). (Secara historis dikembangkan dalam inisiatif BARA / KARSA-FIRE).
 
 > [!IMPORTANT]
 > **Prinsip Dasar Data:**
@@ -118,11 +118,10 @@ Klik ikon lonceng pada bilah navigasi atas untuk membuka Pusat Notifikasi:
   - `WASPADA`: Deteksi anomali panas baru atau hasil analisis model Kelas 1.
   - `DARURAT`: Status darurat yang **hanya dapat ditetapkan setelah verifikasi petugas**.
 - **Aksi Notifikasi:**
+  - **Lihat lokasi:** Mengarahkan tampilan peta ke koordinat titik anomali terkait.
   - **Detail:** Melihat riwayat rekaman bukti dan log pengiriman.
-  - **Tandai dibaca / belum dibaca:** Mengelola status baca pesan.
-  - **Akui / Selesai / Abaikan:** Mengubah status operasional penanganan.
-  - **Verifikasi DARURAT:** Tombol khusus bagi petugas lapangan untuk mengesahkan insiden menjadi status darurat (memerlukan input nama petugas).
-  - **Selesaikan event:** Menutup insiden setelah penanganan lapangan selesai.
+  - **Akui:** Mengonfirmasi bahwa notifikasi telah diketahui petugas pemantau.
+  - **Selesaikan event:** Menutup dan menyelesaikan insiden setelah penanganan lapangan selesai.
 
 ---
 

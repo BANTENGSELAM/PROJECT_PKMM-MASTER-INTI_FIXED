@@ -205,3 +205,4 @@ node test_frontend.cjs
 
 - **Pengisian `FIRMS_MAP_KEY`:**  
   Karena alasan keamanan dan kepatuhan privasi, kunci API privat tidak dibagikan dalam paket distribusi. Pengguna baru harus mendaftar MAP_KEY gratis di portal NASA FIRMS dan menyalinnya ke berkas `.env` lokal sebelum menjalankan server. Jika belum diisi, aplikasi akan menampilkan panduan konfigurasi yang jelas pada antarmuka web tanpa menimbulkan galat *crash*.
+

@@ -1,7 +1,7 @@
 # Batasan Sistem & Keterbatasan Ilmiah (Known Limitations)
-## BARA / KARSA-FIRE — Indonesia Fire Watch
+## BARA — Sistem Pemantauan Indikasi Kebakaran Hutan dan Lahan
 
-Dokumen ini mencatat secara transparan batasan teknis, karakteristik sensor satelit, dan fitur-fitur yang belum tersedia pada prototipe **BARA / KARSA-FIRE** saat ini.
+Dokumen ini mencatat secara transparan batasan teknis, karakteristik sensor satelit, dan fitur-fitur yang belum tersedia pada prototipe **BARA** (inisiatif historis BARA / KARSA-FIRE) saat ini.
 
 ---
 

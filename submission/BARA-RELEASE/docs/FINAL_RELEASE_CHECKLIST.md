@@ -1,5 +1,5 @@
 # Checklist Kesiapan Rilis Akhir (Final Release Checklist)
-## BARA / KARSA-FIRE — Indonesia Fire Watch
+## BARA — Sistem Pemantauan Indikasi Kebakaran Hutan dan Lahan
 
 > **Versi Rilis:** `v0.1.0-alpha.9` (Release Freeze)  
 > **Tanggal Audit:** 2026-11-09  

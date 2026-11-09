@@ -166,11 +166,19 @@ async function run() {
     await sleep(2500);
     await client.screenshot(path.join(outDir, 'basemap-layers.png'));
 
-    // 5. notification-center.png (Open Notification Center panel)
-    console.log('5. Capturing notification-center.png...');
+    // 5. notification-center.png & notification-detail.png (Open Notification Center panel)
+    console.log('5. Capturing notification-center.png & notification-detail.png...');
     await client.eval(`document.getElementById('notifBell').click()`);
     await sleep(1000);
     await client.screenshot(path.join(outDir, 'notification-center.png'));
+
+    // Open first notification detail
+    await client.eval(`
+      const detailBtn = document.querySelector('[data-notif-action="detail"]');
+      if (detailBtn) detailBtn.click();
+    `);
+    await sleep(1000);
+    await client.screenshot(path.join(outDir, 'notification-detail.png'));
     await client.eval(`document.getElementById('notifClose').click()`);
     await sleep(500);
 
@@ -204,8 +212,8 @@ async function run() {
     await sleep(1000);
     await client.screenshot(path.join(outDir, 'sentinel-analysis.png'));
 
-    // 8. mobile-view.png (Mobile responsive 390x844)
-    console.log('8. Capturing mobile-view.png...');
+    // 8. mobile-view.png & notification-mobile.png (Mobile responsive 390x844)
+    console.log('8. Capturing mobile-view.png & notification-mobile.png...');
     await client.send('Emulation.setDeviceMetricsOverride', {
       width: 390,
       height: 844,
@@ -215,6 +223,13 @@ async function run() {
     await client.eval(`window.scrollTo(0, 0)`);
     await sleep(1500);
     await client.screenshot(path.join(outDir, 'mobile-view.png'));
+
+    // Open notification center on mobile
+    await client.eval(`document.getElementById('notifBell').click()`);
+    await sleep(1000);
+    await client.screenshot(path.join(outDir, 'notification-mobile.png'));
+    await client.eval(`document.getElementById('notifClose').click()`);
+    await sleep(500);
 
     console.log('\n--- Checking console logs during session ---');
     console.log('Total unhandled JS exceptions:', client.errors.length);

@@ -1,13 +1,13 @@
-# BARA / KARSA-FIRE — Indonesia Fire Watch
+# BARA
 
-> **Sistem Pemantauan Anomali Panas & Deteksi Dini Kebakaran Hutan dan Lahan Indonesia**  
+> **Sistem Pemantauan Indikasi Kebakaran Hutan dan Lahan**  
 > Prototipe Operasional: `project_pkmm-master/` | Dokumentasi: `docs/` | Versi: `0.1.0-alpha.6`
 
 ---
 
 ## 1. Ringkasan Proyek
 
-**BARA (Indonesia Fire Watch)** / **KARSA-FIRE** adalah sistem pemantauan geospasial interaktif yang dirancang untuk mendukung deteksi dini dan pemantauan anomali panas di seluruh daratan Indonesia.
+**BARA** adalah sistem pemantauan geospasial interaktif yang dirancang untuk mendukung deteksi dini dan pemantauan indikasi kebakaran hutan dan lahan serta anomali panas di seluruh daratan Indonesia. (Dalam konteks historis penelitian dan repositori awal, sistem ini juga diasosiasikan dengan inisiatif BARA / KARSA-FIRE).
 
 Aplikasi memadukan:
 1. **NASA FIRMS API (CSV Hotspots):** Data deteksi anomali panas harian dari 4 sumber satelit (*VIIRS S-NPP*, *VIIRS NOAA-20*, *VIIRS NOAA-21*, dan *MODIS NRT*).
@@ -179,7 +179,24 @@ node test_frontend.cjs
 
 ---
 
-## 7. Indeks Dokumentasi Lengkap
+## 7. Dokumentasi Visual Aplikasi
+
+Berikut adalah tangkapan layar antarmuka operasional aktual dari sistem BARA:
+
+| Komponen Antarmuka | Tangkapan Layar |
+|---|---|
+| **Dashboard Utama BARA** | ![Dashboard Utama](docs/images/dashboard-overview.png) |
+| **Pusat Notifikasi (Notification Center)** | ![Pusat Notifikasi](docs/images/notification-center.png) |
+| **Rincian Notifikasi & Jejak Log** | ![Detail Notifikasi](docs/images/notification-detail.png) |
+| **Peta Anomali Panas NASA FIRMS** | ![Peta Anomali](docs/images/hotspot-map.png) |
+| **Pilihan Basemap GIBS & Layer WMS** | ![Basemap & WMS](docs/images/basemap-layers.png) |
+| **Pemantauan Wilayah Grid 3×3** | ![Pemantauan Grid](docs/images/monitoring-grid.png) |
+| **Tampilan Responsif Ponsel (Mobile)** | ![Mobile Dashboard](docs/images/mobile-view.png) |
+| **Pusat Notifikasi Seluler (Mobile)** | ![Mobile Notifikasi](docs/images/notification-mobile.png) |
+
+---
+
+## 8. Indeks Dokumentasi Lengkap
 
 Untuk panduan mendalam dan spesifikasi teknis, silakan merujuk pada dokumen di folder `docs/`:
 
@@ -198,7 +215,7 @@ Untuk panduan mendalam dan spesifikasi teknis, silakan merujuk pada dokumen di f
 
 ---
 
-## 8. Lisensi & Atribusi Data
+## 9. Lisensi & Atribusi Data
 
 - **NASA FIRMS:** Data titik panas disediakan oleh NASA LANCE / FIRMS MODAPS.
 - **NASA GIBS:** Peta dasar satelit disediakan oleh NASA Global Imagery Browse Services (GIBS).

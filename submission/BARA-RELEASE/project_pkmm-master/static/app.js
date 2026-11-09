@@ -651,13 +651,20 @@ function notificationItem(n){
   const locate=hasCoords?`<button class="notif-locate" type="button" data-notif-locate data-lat="${lat}" data-lon="${lon}">↗ Lihat lokasi</button>`:'';
   const actions=[];
   actions.push('<button type="button" class="quiet" data-notif-action="detail">Detail</button>');
-  if(unread)actions.push('<button type="button" class="quiet" data-notif-action="read">Tandai dibaca</button>');
-  else actions.push('<button type="button" class="quiet" data-notif-action="unread">Tandai belum dibaca</button>');
-  if(status!=='ACKNOWLEDGED'&&status!=='DISMISSED')actions.push('<button type="button" class="quiet" data-notif-action="acknowledged">Akui</button>');
-  if(status!=='RESOLVED'&&status!=='DISMISSED')actions.push('<button type="button" class="quiet" data-notif-action="resolved">Selesai</button>');
-  if(status!=='DISMISSED')actions.push('<button type="button" class="quiet" data-notif-action="dismissed">Abaikan</button>');
-  if(n.event_id&&n.event_status!=='RESOLVED'&&typeof prompt==='function')actions.push(`<button type="button" class="quiet notif-resolve" data-notif-action="resolve" data-event-id="${escapeHTML(n.event_id)}">Selesaikan event</button>`);
-  if(n.event_id&&n.event_status!=='VERIFIED'&&n.event_status!=='RESOLVED'&&typeof prompt==='function')actions.push(`<button type="button" class="quiet notif-verify" data-notif-action="verify" data-event-id="${escapeHTML(n.event_id)}">Verifikasi DARURAT</button>`);
+
+  if(n.event_id){
+    if(n.event_status==='OPEN'){
+      if(status==='UNREAD'||status==='READ')actions.push('<button type="button" class="quiet" data-notif-action="acknowledged">Akui</button>');
+      if(typeof prompt==='function')actions.push(`<button type="button" class="quiet notif-resolve" data-notif-action="resolve" data-event-id="${escapeHTML(n.event_id)}">Selesaikan event</button>`);
+    } else if(n.event_status==='VERIFIED'){
+      if(typeof prompt==='function')actions.push(`<button type="button" class="quiet notif-resolve" data-notif-action="resolve" data-event-id="${escapeHTML(n.event_id)}">Selesaikan event</button>`);
+    }
+  } else {
+    if(unread)actions.push('<button type="button" class="quiet" data-notif-action="read">Tandai dibaca</button>');
+    if(status==='UNREAD'||status==='READ')actions.push('<button type="button" class="quiet" data-notif-action="acknowledged">Akui</button>');
+    if(status!=='RESOLVED'&&status!=='DISMISSED')actions.push('<button type="button" class="quiet" data-notif-action="resolved">Selesai</button>');
+    if(status!=='DISMISSED')actions.push('<button type="button" class="quiet" data-notif-action="dismissed">Abaikan</button>');
+  }
   return `<article class="notif-item ${unread?'unread':''} sev-${severity.toLowerCase()}" data-notif-id="${escapeHTML(n.id)}">
     <div class="notif-item-head">
       <span class="notif-chip ${severity.toLowerCase()}">${severity}</span>

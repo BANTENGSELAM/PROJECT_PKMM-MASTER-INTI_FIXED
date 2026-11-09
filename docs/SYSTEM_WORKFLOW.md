@@ -1,7 +1,7 @@
 # Arsitektur & Alur Kerja Sistem (System Workflow)
-## BARA / KARSA-FIRE — Indonesia Fire Watch
+## BARA — Sistem Pemantauan Indikasi Kebakaran Hutan dan Lahan
 
-Dokumen ini menjelaskan arsitektur aktual, topologi komponen, dan alur pergerakan data pada aplikasi **BARA / KARSA-FIRE** yang berada di dalam folder `project_pkmm-master/`.
+Dokumen ini menjelaskan arsitektur aktual, topologi komponen, dan alur pergerakan data pada aplikasi **BARA** (prototipe di dalam folder `project_pkmm-master/`, secara historis berakar dari inisiatif BARA / KARSA-FIRE).
 
 ---
 
