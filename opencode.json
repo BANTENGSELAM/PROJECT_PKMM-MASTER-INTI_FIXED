@@ -1,0 +1,7 @@
+{
+  "instructions": "Selalu buat rencana arsitektur (Planning Phase) yang jelas sebelum mengubah file apa pun. Jangan menulis ulang seluruh isi file jika hanya beberapa baris yang perlu diubah. Fokus pada akurasi dan efisiensi token.",
+  "agent": {
+    "think": true
+  }
+}
+

@@ -1,0 +1,31 @@
+# Secrets & Local Configurations
+.env
+*.env
+.env.*
+!.env.example
+
+# Python Virtual Environments & Bytecode
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local Runtime States
+project_pkmm-master/monitor_state.json
+project_pkmm-master/monitor_state.tmp
+project_pkmm-master/notification_state.json
+project_pkmm-master/notification_state.tmp
+project_pkmm-master/notification_state.json.corrupt
+
+# OS & Editor Metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Temporary Distribution & Profiles
+.dist/
+chrome_cdp_profile*
+
